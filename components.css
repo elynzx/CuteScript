@@ -8,6 +8,8 @@
     font-size: 1.2rem;
 }
 
+
+
 .encryptorTextContainer {
     border: 2px solid var(--dark-primary);
     border-radius: 2.75rem;
@@ -176,7 +178,7 @@
 }
 
 .textContent {
-    height: 60vh;
+    height: 50vh;
     width: 30vw;
     display: flex;
     flex-direction: column;
@@ -187,7 +189,7 @@
 .textContainer textarea {
     width: 90%;
     border: none;
-    height: 90%;
+    height: 80%;
     margin-top: 2.5rem;
     border-radius: 5rem;
     outline: none;
@@ -206,6 +208,28 @@
     align-items: center;
 }
 
+#restrictionInfo {
+    position: absolute;
+    background-color: white;
+    padding: 1rem;
+    width: 180px;
+    bottom: 80px;
+    left: 140px;
+    border-radius: 25px;
+    text-align: center;
+}
+
+#restrictionInfo::before {
+  content: '';
+  position: absolute;
+  border-style: solid;
+  border-width: 18px 35px 0 0;
+  border-color: white transparent transparent transparent;
+  bottom: -6px;
+  left: 5px;
+}
+
+
 .decorativeBorder {
     width: 120px;
     height: 120px;
@@ -216,16 +240,19 @@
     justify-content: center;
     align-items: center;
 }
-.decorativeBorder img{
-    width: 100px;
-    height: 100px;
+
+.decorativeImg {
+    width: 140px;
+    height: 140px;
     border-radius: 50%;
     object-fit: cover;
+
 }
+
 
 #encryptImg {
     position: absolute;
-    top: -15%;
+    top: -23%;
     left: 10%;
 }
 

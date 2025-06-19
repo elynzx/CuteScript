@@ -26,13 +26,16 @@
         <!-- Encryptor Content -->
         <div id="encryptorContainer">
             <h1>CuteScript</h1>
+            
             <div id="encryptTextContainer">
                 <div id="encryptText" class="encryptorTextContainer textContent">
-                    <div id="encryptImg" class="decorativeBorder rotating-border">
-                        <img src="" alt="">
+                    <div id="encryptImg">
+                        <!-- <div class="decorativeBorder rotating-border"></div> -->
+                        <img id="decorativeImg" class="decorativeImg" src="assets/animatedIcon.gif" alt="">
+                        <p id="restrictionInfo">*Only lowercase letters and spaces are allowed for now</p>
                     </div>
                     <div class="textContainer">
-                        <textarea name="" id="" placeholder="Enter text here..."></textarea>
+                        <textarea name="" id="encryptInput" placeholder="Enter text here..."></textarea>
                     </div>
                     <div class="menuButtons">
                         <button type="button" id="copyEncryptedText" onclick="clearEncryptedText"
@@ -50,11 +53,12 @@
                     <button type="button" id="decryptButton" onclick="decryptText">Decrypt</button>
                 </div>
                 <div id="decryptText" class="encryptorTextContainer textContent">
-                    <div id="decryptImg" class="decorativeBorder rotating-border">
-                        <img src="" alt="">
-                    </div>
+                    <!-- <div id="decryptImg" >
+                        <div class="decorativeBorder rotating-border"></div>
+                        <img id="decorativeImg" class="decorativeImg"  src="assets/animatedIcon.gif" alt="">
+                    </div> -->
                     <div class="textContainer">
-                        <textarea name="" id=""></textarea>
+                        <textarea name="" id="decryptInput"></textarea>
                     </div>
                     <div class="menuButtons">
                         <button type="button" id="copyDecryptedText" onclick="copyDecryptedText"
