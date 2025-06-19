@@ -1,0 +1,64 @@
+@keyframes starPulse {
+
+    0%,
+    100% {
+        transform: scale(0.8);
+    }
+
+    50% {
+        transform: scale(1);
+    }
+}
+
+.star-pulse {
+    animation: starPulse 2s infinite ease-in-out;
+    pointer-events: none;
+}
+
+@keyframes moveRight {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(8px);
+    }
+
+}
+
+.arrow-top {
+    animation: moveRight 1.5s infinite ease-in-out;
+}
+
+@keyframes moveLeft {
+
+    0%,
+    100% {
+        transform: translate(0);
+    }
+
+    50% {
+        transform: translate(-8px);
+    }
+
+}
+
+.arrow-bottom {
+    animation: moveLeft 1.5s infinite ease-in-out;
+}
+
+@keyframes rotateBorder {
+    from {
+        transform: rotate(0deg);
+    }
+
+    to {
+        transform: rotate(360deg);
+    }
+}
+
+.rotating-border {
+    animation: rotateBorder 10s linear infinite;
+}

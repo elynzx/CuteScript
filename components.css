@@ -1,0 +1,293 @@
+/* Info Button */
+#infoButton {
+    margin-top: 2rem;
+    margin-right: 4rem;
+    color: white;
+    cursor: pointer;
+    user-select: none;
+    font-size: 1.2rem;
+}
+
+.encryptorTextContainer {
+    border: 2px solid var(--dark-primary);
+    border-radius: 2.75rem;
+    display: flex;
+    align-items: center;
+    background-color: white;
+}
+
+/* Modals */
+
+.modal-overlay {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    background: transparent;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    z-index: 100;
+}
+
+.modal {
+    border: 2px solid var(--dark-primary);
+    border-radius: 2.75rem;
+    display: flex;
+    align-items: center;
+}
+
+.hidden {
+    display: none;
+}
+
+
+/* Information Modal */
+
+#informationContainer {
+    flex-direction: row;
+    background-color: white;
+    gap: 2rem;
+    width: 500px;
+    position: relative;
+    padding: 3rem;
+}
+
+#exitInformation {
+    position: absolute;
+    bottom: 82%;
+    left: 91%;
+    cursor: pointer;
+    user-select: none;
+}
+
+#informationText {
+    width: 35%;
+
+}
+
+#infoButton {
+    display: flex;
+    justify-content: flex-end;
+}
+
+
+#infoStar1 {
+    position: absolute;
+    bottom: 90%;
+    left: 12%;
+}
+
+#infoStar2 {
+    position: absolute;
+    bottom: 12%;
+    left: 97%;
+}
+
+#infoStar3 {
+    position: absolute;
+    top: 92%;
+    left: 92%;
+}
+
+.vertical-line {
+    height: 180px;
+    border-right: 3px solid var(--dark-primary);
+}
+
+.informationDetails {
+    display: flex;
+    flex-direction: column;
+    gap: 0.75rem;
+    align-items: center;
+
+}
+
+.infoContentSocial {
+    display: flex;
+    flex-direction: row;
+    gap: 0.5rem;
+}
+
+
+
+/* Password Modal */
+
+#enterPasswordForm {
+    flex-direction: column;
+    background-color: var(--bg-lightBlue);
+    gap: 1rem;
+    width: 300px;
+    padding: 2rem 4rem;
+    position: relative;
+}
+
+#inputContainer {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    width: 100%;
+}
+
+#buttonContent {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    width: 100%;
+    color: white;
+}
+
+#savePassword {
+    background-color: var(--pink);
+    color: white;
+}
+
+#cancel {
+    background-color: var(--bg-purple);
+    color: white;
+}
+
+#passStar1 {
+    position: absolute;
+    bottom: 90%;
+    left: 0;
+}
+
+#passStar2 {
+    position: absolute;
+    bottom: 20%;
+    left: 95%;
+}
+
+#passStar3 {
+    position: absolute;
+    bottom: 4%;
+    left: 95%;
+}
+
+/* Encryptor Content */
+
+#encryptTextContainer {
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.textContent {
+    height: 60vh;
+    width: 30vw;
+    display: flex;
+    flex-direction: column;
+    padding: 1rem;
+    position: relative;
+}
+
+.textContainer textarea {
+    width: 90%;
+    border: none;
+    height: 90%;
+    margin-top: 2.5rem;
+    border-radius: 5rem;
+    outline: none;
+    resize: none;
+    font-size: 1rem;
+}
+
+.textContainer {
+    height: 100%;
+    width: 100%;
+    border: 2px dashed rgb(232, 232, 232);
+    border-radius: 35px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+.decorativeBorder {
+    width: 120px;
+    height: 120px;
+    border-radius: 50%;
+    border: 2.5px dashed var(--dark-primary);
+    position: absolute;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+.decorativeBorder img{
+    width: 100px;
+    height: 100px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+#encryptImg {
+    position: absolute;
+    top: -15%;
+    left: 10%;
+}
+
+
+#decryptImg {
+    position: absolute;
+    top: 55%;
+    left: 85%;
+}
+
+.menuButtons {
+    padding: 0.75rem 0;
+    display: flex;
+    flex-direction: row;
+    gap: 0.75rem;
+}
+
+.copyButton {
+    background-color: var(--bg-pink);
+}
+
+.clearButton {
+    background-color: var(--bg-lightBlue);
+}
+
+#encryptionButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 2rem;
+    padding: 0 1rem;
+    position: relative;
+}
+
+#encryptionButtons button {
+    width: 9rem;
+    height: 3rem;
+}
+
+#topArrow {
+    position: absolute;
+    top: 2%;
+    left: 82%;
+    z-index: 1;
+}
+
+#topStar {
+    position: absolute;
+    top: -10%;
+    left: 5%;
+    z-index: 1;
+}
+
+#bottomArrow {
+    position: absolute;
+    bottom: 2%;
+    left: -10%;
+    z-index: 1;
+}
+
+#bottomStar {
+    position: absolute;
+    bottom: -12%;
+    left: 72%;
+    z-index: 1;
+}

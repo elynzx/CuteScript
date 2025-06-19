@@ -1,0 +1,127 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>♡ CuteScript ♡</title>
+
+    <!-- Include stylesheets -->
+    <link rel="stylesheet" href="main.css">
+    <link rel="stylesheet" href="components.css">
+    <link rel="stylesheet" href="animation.css">
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins&display=swap"
+        rel="stylesheet">
+    <!-- Icons -->
+
+</head>
+
+<body>
+    <span id="infoButton">♡ About ♡</span>
+    <main>
+        <!-- Encryptor Content -->
+        <div id="encryptorContainer">
+            <h1>CuteScript</h1>
+            <div id="encryptTextContainer">
+                <div id="encryptText" class="encryptorTextContainer textContent">
+                    <div id="encryptImg" class="decorativeBorder rotating-border">
+                        <img src="" alt="">
+                    </div>
+                    <div class="textContainer">
+                        <textarea name="" id="" placeholder="Enter text here..."></textarea>
+                    </div>
+                    <div class="menuButtons">
+                        <button type="button" id="copyEncryptedText" onclick="clearEncryptedText"
+                            class="copyButton">Copy</button>
+                        <button type="button" id="clearEncryptedText" onclick="clearEncryptedText"
+                            class="clearButton">Clear</button>
+                    </div>
+                </div>
+                <div id="encryptionButtons">
+                    <button type="button" id="encryptButton" onclick="encryptText">Encrypt</button>
+                    <img id="topArrow" class="arrow-top" src="assets/topArrow.png" alt="">
+                    <img id="topStar" class="star-pulse" src="assets/topStar.png" alt="">
+                    <img id="bottomArrow" class="arrow-bottom" src="assets/bottomArrow.png" alt="">
+                    <img id="bottomStar" class="star-pulse" src="assets/bottomStar.png" alt="">
+                    <button type="button" id="decryptButton" onclick="decryptText">Decrypt</button>
+                </div>
+                <div id="decryptText" class="encryptorTextContainer textContent">
+                    <div id="decryptImg" class="decorativeBorder rotating-border">
+                        <img src="" alt="">
+                    </div>
+                    <div class="textContainer">
+                        <textarea name="" id=""></textarea>
+                    </div>
+                    <div class="menuButtons">
+                        <button type="button" id="copyDecryptedText" onclick="copyDecryptedText"
+                            class="copyButton">Copy</button>
+                        <button type="button" id="clearDecryptedText" onclick="clearDecryptedText"
+                            class="clearButton">Clear</button>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </main>
+
+    <!-- Loading Screen -->
+    <div id="loadingScreen">
+
+    </div>
+
+    <!-- Information Modal -->
+    <div id="informationOverlay" class="modal-overlay hidden">
+        <div id="informationContainer" class="modal">
+            <img id="exitInformation" class="exitButton" src="assets/closeButton.png">
+            <div class="informationDetails">
+                <h3>CuteScript</h3>
+                <p>by <a href="">@elynzx</a></p>
+                <div class="infoContentSocial">
+                    <a href=""><img src="assets/social1.png" alt=""></a>
+                    <a href=""><img src="assets/social2.png" alt=""></a>
+                    <a href=""><img src="assets/social3.png" alt=""></a>
+                </div>
+            </div>
+            <div class="vertical-line"></div>
+            <div class="informationText">
+                <h3>¡Welcome to CuteScript!</h3>
+                <br>
+                <p>
+                    Encrypt text with adorable icons, custom mappings, and
+                    password protection. This app transforms your message into a unique combination of cute
+                    emojis based on smart logic and your chosen password.
+                    <br>
+                    Built with ❤️ in HTML, CSS, and JavaScript—this project reflects my passion for programming and
+                    creativity.
+                </p>
+            </div>
+            <!-- Border Decoration -->
+            <img id="infoStar1" class="star-pulse" src="assets/InfoStar1.png" alt="">
+            <img id="infoStar2" class="star-pulse" src="assets/InfoStar2.png" alt="">
+            <img id="infoStar3" class="star-pulse" src="assets/InfoStar3.png" alt="">
+        </div>
+    </div>
+
+    <!-- Password Modal -->
+    <form id="enterPasswordForm" class="modal hidden">
+        <h3>Enter password</h3>
+        <div id="inputContainer">
+            <input type="text" id="password" placeholder="Password">
+            <input type="password" id="confirmPassword" placeholder="Confirm password">
+        </div>
+        <div id="buttonContent">
+            <button type="submit" id="savePassword" onclick="savePassword">Ok</button>
+            <button type="button" id="cancel" onclick="cancel">Cancel</button>
+        </div>
+        <!-- Border Decoration -->
+        <img id="passStar1" class="star-pulse" src="assets/PassStar1.png" alt="">
+        <img id="passStar2" class="star-pulse" src="assets/PassStar2.png" alt="">
+        <img id="passStar3" class="star-pulse" src="assets/PassStar3.png" alt="">
+    </form>
+    <script src="main.js"></script>
+</body>
+
+</html>

@@ -1,0 +1,79 @@
+:root {
+    --dark-primary: #304463;
+    --bg-pink: #ffd8ec;
+    --bg-purple: #7886bc;
+    --bg-lightBlue: #D9EAFD;
+    --bg-lylac: #AEB8DF;
+    --bg-linealCenter: #F4D9EB;
+    --pink: #fabbe6;
+    --yellow: #fbedd3;
+    --font-mainText: "Fredoka", sans-serif;
+    --font-text: "Poppins", sans-serif;
+    ;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+}
+
+html {
+    min-height: 100%;
+}
+
+body {
+    font-family: var(--font-mainText);
+    background-image: linear-gradient(var(--bg-lylac), var(--bg-pink), white);
+    color: var(--dark-primary);
+}
+
+main {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+}
+
+h1 {
+    font-size: 2.5rem;
+    color: white;
+    text-align: center;
+    margin-top: 1rem;
+    margin-bottom: 5rem;
+}
+
+p {
+    font-family: var(--font-text);
+    font-size: 0.75rem;
+}
+
+button {
+    font-family: var(--font-mainText);
+    font-size: 1rem;
+    font-weight: 500;
+    padding: 0.5rem 1rem;
+    border: 2px solid var(--dark-primary);
+    border-radius: 25px;
+    min-width: 8rem;
+    color: var(--dark-primary);
+    background-color: white;
+    cursor: pointer;
+}
+
+button:hover {
+    transform: scale(1.1);
+}
+
+input {
+    border: 2px solid var(--dark-primary);
+    padding: 0.75rem;
+    border-radius: 45px;
+    text-align: center;
+    font-family: var(--font-text);
+
+}
+
+input:focus {
+    outline: none;
+}
+
