@@ -15,6 +15,7 @@
 * {
     margin: 0;
     padding: 0;
+    box-sizing: border-box;
 }
 
 html {
@@ -39,7 +40,7 @@ h1 {
     color: white;
     text-align: center;
     margin-top: 1rem;
-    margin-bottom: 8rem;
+    margin-bottom: 2rem;
 }
 
 p {

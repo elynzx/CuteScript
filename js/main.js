@@ -1,13 +1,3 @@
-/* /* Icon Animation */
-const decryptImg = document.querySelector("#decorativeImg")
-const icons = ["assets/encryptImg.png", "assets/decryptImg.png"]
-let currentIndex = 0
-
-setInterval(() => {
-      currentIndex = (currentIndex + 1) % icons.length
-      decryptImg.src = icons[currentIndex]
-}, 1500)
- */
 
 /* Adding sound into buttons */
 console.log("script cargado")
@@ -22,31 +12,35 @@ buttons.forEach(button => {
       })
 })
 
+/* Showing About modal  */
+
 const infoButton = document.getElementById("infoButton")
 const informationOverlay = document.getElementById("informationOverlay")
 const exitInformation = document.getElementById("exitInformation")
 
 infoButton.addEventListener("click", () => {
       informationOverlay.classList.remove("hidden");
+      console.log("script buttom")
 })
 
 exitInformation.addEventListener("click", () => {
       informationOverlay.classList.add("hidden");
 });
 
+/* Create Password modal */
+
+const createPassword = document.getElementById("createPassword")
+const createPasswordOverlay = document.getElementById("createPasswordOverlay")
+const cancelButton = document.getElementById("cancelButton")
+
+createPassword.addEventListener("click", () => {
+      createPasswordOverlay.classList.remove("hidden");
+})
+
+cancelButton.addEventListener("click", () => {
+      createPasswordOverlay.classList.add("hidden");
+});
+
 /* Input validation */
 const lowercaseOnly = /^[a-z\s]+$/;
-const
 
-function validateInput(text, password) {
-
-      if (!text.trim() || !lowercaseOnly.test(text)) {
-            alert("Please use only lowercase letters and spaces.")
-            return false;
-      }
-      if (!password || password.trim().length < 4) {
-            alert("Password must be at least 8 characters.")
-            return false
-      }
-      return true
-}

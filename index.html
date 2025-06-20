@@ -7,45 +7,70 @@
     <title>♡ CuteScript ♡</title>
 
     <!-- Include stylesheets -->
-    <link rel="stylesheet" href="main.css">
-    <link rel="stylesheet" href="components.css">
-    <link rel="stylesheet" href="animation.css">
+    <link rel="stylesheet" href="css/main.css">
+    <link rel="stylesheet" href="css/components.css">
+    <link rel="stylesheet" href="css/animation.css">
 
     <!-- Fonts -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Fredoka:wght@300..700&family=Poppins&display=swap"
         rel="stylesheet">
+
     <!-- Icons -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css"
+        integrity="sha512-KfkfwYDsLkIlwQp6LFnl8zNdLGxu9YAA1QvwINks4PhcElQSvqcyVLLD9aMhXd13uQjoXtEKNosOWaZqXgel0g=="
+        crossorigin="anonymous" referrerpolicy="no-referrer" />
+
 
 </head>
 
 <body>
-    <span id="infoButton">♡ About ♡</span>
+
     <main>
         <!-- Encryptor Content -->
         <div id="encryptorContainer">
             <h1>CuteScript</h1>
-            
+            <div id="menu">
+                <span id="infoButton" class="menu-button">♡ About ♡</span>
+                <span>|</span>
+                <div class="theme-selector ">
+                    <label class="select-label menu-button" for="select-theme">Choose Theme</label>
+                    <div id="select-theme-container" class="select-body">
+                        <select name="theme" id="select-theme">
+                            <option value="animals">🐶</option>
+                            <option value="desserts">🍰</option>
+                            <option value="stars">🌟</option>
+                            <option value="flowers">🌷</option>
+                        </select>
+                        <div class="select-icon">
+                            <i class="fa-solid fa-chevron-down"></i>
+                            
+                        </div>
+                    </div>
+                </div>
+            </div>
             <div id="encryptTextContainer">
                 <div id="encryptText" class="encryptorTextContainer textContent">
+                    <p id="restrictionInfo">*Only lowercase letters and spaces are allowed for now</p>
                     <div id="encryptImg">
                         <!-- <div class="decorativeBorder rotating-border"></div> -->
                         <img id="decorativeImg" class="decorativeImg" src="assets/animatedIcon.gif" alt="">
-                        <p id="restrictionInfo">*Only lowercase letters and spaces are allowed for now</p>
                     </div>
                     <div class="textContainer">
                         <textarea name="" id="encryptInput" placeholder="Enter text here..."></textarea>
                     </div>
                     <div class="menuButtons">
-                        <button type="button" id="copyEncryptedText" onclick="clearEncryptedText"
-                            class="copyButton">Copy</button>
-                        <button type="button" id="clearEncryptedText" onclick="clearEncryptedText"
-                            class="clearButton">Clear</button>
+                        <div class="editButtons">
+                            <button type="button" id="copyEncryptedText" class="copyButton">Copy</button>
+                            <button type="button" id="clearEncryptedText" class="clearButton">Clear</button>
+                        </div>
+                        <button type="button" id="createPassword">Create Password</button>
                     </div>
+
                 </div>
                 <div id="encryptionButtons">
-                    <button type="button" id="encryptButton" onclick="encryptText">Encrypt</button>
+                    <button type="button" id="encryptButton">Encrypt</button>
                     <img id="topArrow" class="arrow-top" src="assets/topArrow.png" alt="">
                     <img id="topStar" class="star-pulse" src="assets/topStar.png" alt="">
                     <img id="bottomArrow" class="arrow-bottom" src="assets/bottomArrow.png" alt="">
@@ -61,10 +86,8 @@
                         <textarea name="" id="decryptInput"></textarea>
                     </div>
                     <div class="menuButtons">
-                        <button type="button" id="copyDecryptedText" onclick="copyDecryptedText"
-                            class="copyButton">Copy</button>
-                        <button type="button" id="clearDecryptedText" onclick="clearDecryptedText"
-                            class="clearButton">Clear</button>
+                        <button type="button" id="copyDecryptedText" class="copyButton">Copy</button>
+                        <button type="button" id="clearDecryptedText" class="clearButton">Clear</button>
                     </div>
                 </div>
             </div>
@@ -110,22 +133,25 @@
     </div>
 
     <!-- Password Modal -->
-    <form id="enterPasswordForm" class="modal hidden">
-        <h3>Enter password</h3>
-        <div id="inputContainer">
-            <input type="text" id="password" placeholder="Password">
-            <input type="password" id="confirmPassword" placeholder="Confirm password">
-        </div>
-        <div id="buttonContent">
-            <button type="submit" id="savePassword" onclick="savePassword">Ok</button>
-            <button type="button" id="cancel" onclick="cancel">Cancel</button>
-        </div>
-        <!-- Border Decoration -->
-        <img id="passStar1" class="star-pulse" src="assets/PassStar1.png" alt="">
-        <img id="passStar2" class="star-pulse" src="assets/PassStar2.png" alt="">
-        <img id="passStar3" class="star-pulse" src="assets/PassStar3.png" alt="">
-    </form>
-    <script src="main.js"></script>
+    <div id="createPasswordOverlay" class="modal-overlay hidden">
+        <form id="enterPasswordForm" class="modal">
+            <h3>Enter password</h3>
+            <div id="inputContainer">
+                <input type="text" id="password" placeholder="Password">
+                <input type="password" id="confirmPassword" placeholder="Confirm password">
+            </div>
+            <div id="buttonContent">
+                <button type="submit" id="savePassword">Ok</button>
+                <button type="button" id="cancelButton">Cancel</button>
+            </div>
+            <!-- Border Decoration -->
+            <img id="passStar1" class="star-pulse" src="assets/PassStar1.png" alt="">
+            <img id="passStar2" class="star-pulse" src="assets/PassStar2.png" alt="">
+            <img id="passStar3" class="star-pulse" src="assets/PassStar3.png" alt="">
+        </form>
+
+    </div>
+    <script src="js/main.js"></script>
 </body>
 
 </html>

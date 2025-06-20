@@ -1,14 +1,26 @@
-/* Info Button */
-#infoButton {
-    margin-top: 2rem;
-    margin-right: 4rem;
+/* Menu */
+
+#menu {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    justify-content: center;
+    gap: 2rem;
     color: white;
-    cursor: pointer;
+    margin-bottom: 10rem;
     user-select: none;
     font-size: 1.2rem;
 }
 
+.menu-button {
+    cursor: pointer;
+}
 
+.select-body{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 
 .encryptorTextContainer {
     border: 2px solid var(--dark-primary);
@@ -26,7 +38,7 @@
     left: 0;
     width: 100%;
     height: 100vh;
-    background: transparent;
+    background-color: rgba(41, 45, 74, 0.7);
     display: flex;
     justify-content: center;
     align-items: center;
@@ -213,22 +225,21 @@
     background-color: white;
     padding: 1rem;
     width: 180px;
-    bottom: 80px;
-    left: 140px;
+    top: -130px;
+    left: 200px;
     border-radius: 25px;
     text-align: center;
 }
 
 #restrictionInfo::before {
-  content: '';
-  position: absolute;
-  border-style: solid;
-  border-width: 18px 35px 0 0;
-  border-color: white transparent transparent transparent;
-  bottom: -6px;
-  left: 5px;
+    content: '';
+    position: absolute;
+    border-style: solid;
+    border-width: 18px 35px 0 0;
+    border-color: white transparent transparent transparent;
+    bottom: -6px;
+    left: 5px;
 }
-
 
 .decorativeBorder {
     width: 120px;
@@ -246,9 +257,7 @@
     height: 140px;
     border-radius: 50%;
     object-fit: cover;
-
 }
-
 
 #encryptImg {
     position: absolute;
@@ -256,19 +265,20 @@
     left: 10%;
 }
 
-
-#decryptImg {
-    position: absolute;
-    top: 55%;
-    left: 85%;
+.menuButtons {
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+    padding: 1rem;
 }
 
-.menuButtons {
+.editButtons {
     padding: 0.75rem 0;
     display: flex;
     flex-direction: row;
     gap: 0.75rem;
 }
+
 
 .copyButton {
     background-color: var(--bg-pink);
@@ -277,6 +287,12 @@
 .clearButton {
     background-color: var(--bg-lightBlue);
 }
+
+#createPassword {
+    background-color: var(--dark-primary);
+    color: white;
+}
+
 
 #encryptionButtons {
     display: flex;
